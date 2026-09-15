@@ -374,7 +374,7 @@ body {
     position: relative;
     text-align: center;
   }
-  .hero-copy h1 { font-size: clamp(30px, 9vw, 44px); }
+  .hero-copy h1 { font-size: clamp(25px, 7.2vw, 34px); line-height: 1.18; }
   .hero-copy h1 span { display: inline; }
   .hero-copy {
     position: relative;
