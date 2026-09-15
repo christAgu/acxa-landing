@@ -311,6 +311,113 @@ body {
   border: 1px solid rgba(91, 141, 255, 0.28);
 }
 
+/* ---------- Products ---------- */
+.products {
+  padding: clamp(56px, 8vw, 110px) clamp(20px, 5vw, 64px);
+  background: linear-gradient(180deg, rgba(11, 26, 58, 0.25), transparent);
+  border-top: 1px solid rgba(147, 165, 196, 0.10);
+}
+
+.products-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.products-title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 3.4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.products-sub {
+  margin: 14px auto 0;
+  max-width: 52ch;
+  text-align: center;
+  color: var(--ink-dim);
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+
+.product-grid {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.product-card {
+  max-width: 560px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(13, 25, 54, 0.55);
+  border: 1px solid rgba(91, 141, 255, 0.22);
+  box-shadow: 0 18px 50px rgba(2, 6, 18, 0.5);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(91, 141, 255, 0.45);
+  box-shadow: 0 26px 60px rgba(2, 6, 18, 0.6), 0 0 40px rgba(46, 107, 255, 0.15);
+}
+
+.product-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-body { padding: 26px 28px 30px; }
+
+.product-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.product-head h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.product-badge {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+  background: rgba(46, 107, 255, 0.14);
+  border: 1px solid rgba(91, 141, 255, 0.3);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+
+.product-body p {
+  margin-top: 14px;
+  color: var(--ink-dim);
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: var(--accent-bright);
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.product-link:hover { color: #9db9ff; }
+.product-link svg { transition: transform 0.2s ease; }
+.product-link:hover svg { transform: translateX(3px); }
+
 /* ---------- Footer ---------- */
 .site-footer {
   border-top: 1px solid rgba(147, 165, 196, 0.12);
