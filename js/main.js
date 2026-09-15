@@ -15,23 +15,9 @@ links.addEventListener('click', (e) => {
   }
 });
 
-// Section « Nos produits » : cachée par défaut, affichée au clic
-const productsSection = document.getElementById('produits');
-document.querySelectorAll('a[href="#produits"]').forEach((a) => {
-  a.addEventListener('click', (e) => {
-    e.preventDefault();
-    const open = productsSection.classList.toggle('open');
-    if (open) {
-      setTimeout(() => productsSection.scrollIntoView({ behavior: 'smooth' }), 60);
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  });
-});
-
-// Particle wave behind the illuminated A
+// Particle wave (pages with #wave-canvas only)
 const canvas = document.getElementById('wave-canvas');
-const ctx = canvas.getContext('2d');
+const ctx = canvas ? canvas.getContext('2d') : null;
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 let W, H, dpr;
@@ -106,12 +92,14 @@ function loop(now) {
   requestAnimationFrame(loop);
 }
 
-resize();
-spawn();
-window.addEventListener('resize', () => { resize(); spawn(); });
+if (canvas) {
+  resize();
+  spawn();
+  window.addEventListener('resize', () => { resize(); spawn(); });
 
-if (reducedMotion) {
-  draw(0);
-} else {
-  requestAnimationFrame(loop);
+  if (reducedMotion) {
+    draw(0);
+  } else {
+    requestAnimationFrame(loop);
+  }
 }
