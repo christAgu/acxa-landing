@@ -340,8 +340,15 @@ body {
   border: 1px solid rgba(91, 141, 255, 0.28);
 }
 
-/* ---------- Products page ---------- */
-.product-eyebrow {
+/* ---------- Solutions page ---------- */
+.solutions-hero {
+  position: relative;
+  padding: calc(var(--nav-h) + 56px) clamp(20px, 5vw, 64px) 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -350,94 +357,71 @@ body {
   margin-bottom: 14px;
 }
 
-.product-hero .product-badge {
-  display: inline-block;
+.solutions-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.4vw, 42px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  max-width: 18ch;
+}
+
+.solutions-sub {
   margin-top: 18px;
+  max-width: 62ch;
+  font-size: clamp(14.5px, 1.15vw, 16px);
+  line-height: 1.6;
+  color: var(--ink-dim);
 }
 
-.product-badge {
-  font-size: 11.5px;
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 44px;
+}
+
+.solution-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(147, 165, 196, 0.14);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.solution-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(91, 141, 255, 0.4);
+  box-shadow: 0 16px 40px rgba(2, 6, 18, 0.45);
+}
+
+.solution-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.solution-card-body { padding: 20px 22px 24px; }
+
+.solution-card h3 {
+  font-family: var(--font-display);
+  font-size: 18.5px;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent-bright);
-  background: rgba(46, 107, 255, 0.14);
-  border: 1px solid rgba(91, 141, 255, 0.3);
-  border-radius: 999px;
-  padding: 4px 12px;
+  color: var(--ink);
+  margin-bottom: 8px;
 }
 
-.product-features {
-  display: flex;
-  gap: clamp(20px, 4vw, 48px);
-  margin-top: 30px;
-  flex-wrap: wrap;
+.solution-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-dim);
 }
 
-.product-visual {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 320px;
-}
+.solutions-cta { margin-top: 48px; }
 
-.product-visual-glow {
-  position: absolute;
-  width: 115%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle,
-    rgba(192, 108, 232, 0.20) 0%,
-    rgba(46, 107, 255, 0.10) 45%,
-    transparent 70%);
-  filter: blur(8px);
-  z-index: 1;
-}
-
-.product-logo-card {
-  position: relative;
-  z-index: 2;
-  width: min(100%, 520px);
-  height: auto;
-  border-radius: 20px;
-  border: 1.5px solid rgba(200, 218, 255, 0.85);
-  box-shadow:
-    0 0 0 1px rgba(140, 178, 255, 0.55),
-    0 0 26px rgba(160, 192, 255, 0.75),
-    0 0 70px rgba(70, 125, 255, 0.50),
-    0 0 120px rgba(46, 107, 255, 0.30),
-    0 24px 70px rgba(2, 6, 18, 0.55);
-  animation: card-breathe 5.5s ease-in-out infinite;
-  transition: transform 0.3s ease;
-}
-.product-logo-card:hover { transform: translateY(-4px) scale(1.01); }
-
-@keyframes card-breathe {
-  0%, 100% {
-    border-color: rgba(190, 212, 255, 0.75);
-    box-shadow:
-      0 0 0 1px rgba(140, 178, 255, 0.45),
-      0 0 22px rgba(160, 192, 255, 0.60),
-      0 0 60px rgba(70, 125, 255, 0.40),
-      0 0 100px rgba(46, 107, 255, 0.24),
-      0 24px 70px rgba(2, 6, 18, 0.55);
-  }
-  50% {
-    border-color: rgba(230, 240, 255, 1);
-    box-shadow:
-      0 0 0 1px rgba(170, 200, 255, 0.70),
-      0 0 34px rgba(180, 206, 255, 0.95),
-      0 0 90px rgba(90, 140, 255, 0.60),
-      0 0 150px rgba(46, 107, 255, 0.40),
-      0 24px 70px rgba(2, 6, 18, 0.55);
-  }
-}
-
-@media (max-width: 900px) {
-  .product-features { justify-content: center; }
-  .product-visual { min-height: 0; margin-top: 16px; }
-  .product-logo-card { width: min(88vw, 420px); }
+@media (max-width: 700px) {
+  .solutions-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- Footer ---------- */
