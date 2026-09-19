@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Senou Pay — Mockup téléphones</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  html, body { width: 1200px; height: 750px; overflow: hidden; }
+  body {
+    background:
+      radial-gradient(90% 70% at 20% 0%, #F7EDFC 0%, transparent 60%),
+      radial-gradient(80% 70% at 90% 100%, #EFE2F8 0%, transparent 60%),
+      linear-gradient(160deg, #FDFBFF 0%, #F3EAFA 100%);
+    position: relative;
+  }
+  .scene { position: absolute; inset: 0; perspective: 2200px; }
+
+  .dev { position: absolute; width: 300px; height: 630px; transform-origin: center; }
+  .dev .phone-frame { width: 100%; height: 100%; }
+  .dev .scr { padding: 40px 16px 18px; font-size: 12.5px; }
+
+  .d1 { left: 65px;  top: 25px;  transform: rotate(-24deg) scale(0.68); }
+  .d2 { left: 330px; top: -53px; transform: rotate(-24deg) scale(0.72); }
+  .d3 { left: 590px; top: 115px; transform: rotate(-24deg) scale(0.72); }
+  .d4 { left: 850px; top: 5px;   transform: rotate(-24deg) scale(0.68); }
+
+  h3 { font-size: 19px; }
+  .s-head { display: flex; justify-content: space-between; align-items: center; }
+  .card-wrap { margin-top: 16px; }
+  .card-wrap .sp-card { width: 168px; }
+  .card-ghost { display: none; }
+  .dots { display: flex; gap: 5px; margin-top: 14px; }
+  .dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--soft); }
+  .dots i.on { background: var(--primary); }
+  .lbl-block { margin-top: 30px; }
+  .src { margin-top: 8px; background: #fff; border-radius: 14px; padding: 11px 12px;
+    box-shadow: 0 10px 24px rgba(36,27,46,0.08); }
+  .av-sm { width: 26px; height: 26px; border-radius: 50%; background: var(--soft); display: grid; place-items: center; }
+  .src .menu { margin-left: auto; }
+  .cardnum { margin-top: 16px; font-weight: 600; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+
+  .tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px; margin-top: 12px; }
+  .tile { min-width: 0; }
+  .tile .val { white-space: nowrap; font-size: 15px; }
+  .logo-dot { width: 24px; height: 24px; border-radius: 50%; background: var(--primary); color: #fff;
+    display: grid; place-items: center; font-size: 14px; margin-bottom: 18px; }
+  .emoji { margin-bottom: 18px; }
+  .ph.g1 { background: linear-gradient(150deg, #6b4a7d, #C06CE8 55%, #f0c36b); }
+  .ph.g2 { background: linear-gradient(150deg, #2E9E5B, #7fbf8a 50%, #C06CE8); }
+  .sect { margin-top: 14px; font-size: 12px; font-weight: 600; }
+  .cta-bar { margin-top: 10px; font-size: 13px; }
+  .cta-bar div { padding: 12px 0; }
+
+  .profile-card { position: relative; margin-top: 14px; border-radius: 16px; padding: 16px; color: #fff;
+    background: linear-gradient(140deg, var(--primary), #8E3FBE); box-shadow: 0 14px 30px rgba(155,69,198,0.32); }
+  .profile-card .name { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 17px; }
+  .profile-card .sub { font-size: 11px; opacity: 0.9; }
+  .profile-card .adv { margin-top: 34px; font-size: 12px; font-weight: 600; display: flex; justify-content: space-between; }
+  .ava { position: absolute; top: 14px; right: 14px; width: 30px; height: 30px; border-radius: 50%;
+    background: rgba(255,255,255,0.92); display: grid; place-items: center; }
+  .iban { margin-top: 14px; background: #fff; border-radius: 14px; padding: 12px;
+    box-shadow: 0 10px 24px rgba(36,27,46,0.10); display: flex; align-items: center; }
+  .iban .num { font-weight: 600; font-size: 12px; margin-top: 3px; }
+  .iban .copy { margin-left: auto; }
+  .rowline { display: flex; justify-content: space-between; align-items: center; font-size: 12.5px; font-weight: 600;
+    padding: 12px 2px; border-bottom: 1px solid var(--border); }
+  .arw { color: var(--primary); }
+
+  .topbal { margin-top: 6px; }
+  .topbal .val { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 24px; }
+  .topbal .lbl { color: var(--text2); font-size: 12px; }
+  .tx.add { color: var(--primary-dark); }
+</style>
+</head>
+<body>
+<div class="scene">
+  <div class="dev d1"><div class="phone-frame"><div class="notch"></div><div class="scr" id="a"></div></div></div>
+  <div class="dev d2"><div class="phone-frame"><div class="notch"></div><div class="scr" id="b"></div></div></div>
+  <div class="dev d3"><div class="phone-frame"><div class="notch"></div><div class="scr" id="c"></div></div></div>
+  <div class="dev d4"><div class="phone-frame"><div class="notch"></div><div class="scr" id="d"></div></div></div>
+</div>
+<script src="screens.js"></script>
+<script>
+  document.getElementById('a').innerHTML = screenProfile();
+  document.getElementById('b').innerHTML = screenCards();
+  document.getElementById('c').innerHTML = screenMoney();
+  document.getElementById('d').innerHTML = screenMembers();
+</script>
+</body>
+</html>
