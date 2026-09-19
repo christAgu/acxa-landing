@@ -569,6 +569,79 @@ body {
   color: rgba(147, 165, 196, 0.6);
 }
 
+/* ---------- Light page variant (Solutions / Produits) ---------- */
+body.page-light {
+  background: #ffffff;
+}
+
+body.page-light .hero-wave { display: none; }
+
+body.page-light .site-nav {
+  background: #050c1d;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.page-light .site-footer {
+  background: #050c1d;
+}
+
+body.page-light .hero-copy h1 {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: #0b1a3a;
+  filter: none;
+  animation: none;
+}
+
+body.page-light .solutions-title { color: #0b1a3a; }
+
+body.page-light .hero-sub,
+body.page-light .solutions-sub {
+  color: #4a5568;
+}
+
+body.page-light .section-eyebrow {
+  color: var(--accent);
+}
+
+body.page-light .feature {
+  color: #334155;
+}
+
+body.page-light .solution-card {
+  background: #f6f8fc;
+  border-color: rgba(11, 26, 58, 0.08);
+}
+body.page-light .solution-card:hover {
+  border-color: rgba(46, 107, 255, 0.35);
+  box-shadow: 0 16px 40px rgba(11, 26, 58, 0.10);
+}
+body.page-light .solution-card h3 { color: #0b1a3a; }
+body.page-light .solution-card p { color: #52607a; }
+
+/* ---------- Light footer variant (Accueil) ---------- */
+.site-footer.footer-light {
+  background: #ffffff;
+  border-top: 1px solid rgba(11, 26, 58, 0.10);
+}
+.site-footer.footer-light .footer-logo { filter: brightness(0); }
+.site-footer.footer-light .footer-tagline { color: #52607a; }
+.site-footer.footer-light .footer-col { color: #52607a; }
+.site-footer.footer-light .footer-col a { color: #0b1a3a; }
+.site-footer.footer-light .footer-col a:hover { color: var(--accent); }
+.site-footer.footer-light .footer-copy { color: rgba(11, 26, 58, 0.5); }
+.site-footer.footer-light .footer-social a {
+  color: #52607a;
+  border-color: rgba(11, 26, 58, 0.15);
+}
+.site-footer.footer-light .footer-social a:hover {
+  color: #0b1a3a;
+  border-color: var(--accent);
+  background: rgba(46, 107, 255, 0.08);
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .nav-toggle { display: flex; }
