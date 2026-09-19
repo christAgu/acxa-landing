@@ -372,7 +372,7 @@ body {
 .product-logo-card {
   position: relative;
   z-index: 2;
-  width: min(100%, 520px);
+  width: min(60%, 300px);
   height: auto;
   border-radius: 20px;
   border: 1.5px solid rgba(200, 218, 255, 0.85);
@@ -411,7 +411,7 @@ body {
 @media (max-width: 900px) {
   .product-features { justify-content: center; }
   .product-visual { min-height: 0; margin-top: 16px; }
-  .product-logo-card { width: min(88vw, 420px); }
+  .product-logo-card { width: min(52vw, 220px); }
 }
 
 /* ---------- Solutions page ---------- */
