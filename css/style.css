@@ -464,19 +464,6 @@ body {
   pointer-events: none;
 }
 
-.section-eyebrow {
-  display: inline-block;
-  padding: 7px 16px;
-  border-radius: 999px;
-  background: rgba(46, 107, 255, 0.08);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 22px;
-}
-
 .solutions-title {
   font-family: var(--font-display);
   font-size: clamp(32px, 4.2vw, 50px);
@@ -678,10 +665,6 @@ body.page-light .solutions-title { color: #0b1a3a; }
 body.page-light .hero-sub,
 body.page-light .solutions-sub {
   color: #4a5568;
-}
-
-body.page-light .section-eyebrow {
-  color: var(--accent);
 }
 
 body.page-light .feature {
