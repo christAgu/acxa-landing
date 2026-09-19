@@ -1,0 +1,114 @@
+/* Senou Pay — composants d'écran partagés pour les mockups */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #C06CE8;
+  --primary-dark: #9B45C6;
+  --secondary: #241B2E;
+  --tertiary: #C9A9D4;
+  --bg: #FCFAFE;
+  --soft: #E7D8F1;
+  --border: #E7D8F1;
+  --text2: #6C6478;
+  --success: #2E9E5B;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Hanken Grotesk", Arial, sans-serif; color: var(--secondary); }
+
+/* ---------- Carte bancaire ---------- */
+.sp-card {
+  position: relative; border-radius: 16px; overflow: hidden; color: #fff;
+  background: linear-gradient(140deg, var(--primary) 0%, #A855D6 45%, #7B33A8 100%);
+  box-shadow: 0 18px 40px rgba(36, 27, 46, 0.28);
+  aspect-ratio: 1.58; width: 100%;
+}
+.sp-card::after {
+  content: ""; position: absolute; width: 150%; height: 150%; left: -20%; top: 35%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.22), transparent 55%);
+}
+.sp-card .chip { position: absolute; top: 13%; left: 9%; width: 13%; aspect-ratio: 1.35; border-radius: 4px;
+  background: linear-gradient(135deg, #f3e7c4, #cbb277); }
+.sp-card .ast { position: absolute; top: 34%; left: 50%; transform: translateX(-50%); width: 24%; aspect-ratio: 1;
+  border-radius: 50%; background: rgba(255,255,255,0.20); display: grid; place-items: center;
+  font-size: 22px; color: #fff; }
+.sp-card .visa { position: absolute; bottom: 9%; right: 9%; font-family: Arial, sans-serif; font-style: italic;
+  font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
+.sp-card .mark { position: absolute; bottom: 10%; left: 9%; font-family: "Space Grotesk", sans-serif;
+  font-weight: 600; font-size: 12px; letter-spacing: 0.02em; }
+
+/* ---------- Panneau / écran ---------- */
+.panel {
+  background: #fff; border-radius: 26px; padding: 22px;
+  box-shadow: 0 30px 70px rgba(36, 27, 46, 0.16);
+}
+.panel h3 {
+  font-family: "Space Grotesk", sans-serif; font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
+}
+.muted { color: var(--text2); }
+.tiny { font-size: 11px; }
+
+/* listes de transactions */
+.tx { display: flex; align-items: center; gap: 10px; padding: 9px 0; font-size: 13px; font-weight: 600; }
+.tx .av { width: 30px; height: 30px; border-radius: 50%; background: var(--soft); display: grid; place-items: center;
+  font-size: 13px; flex: none; }
+.tx .amt { margin-left: auto; font-variant-numeric: tabular-nums; }
+.tx .amt.in { color: var(--success); }
+
+/* tuiles de solde */
+.tile { border-radius: 16px; background: #fff; box-shadow: 0 12px 30px rgba(36,27,46,0.12); padding: 14px;
+  min-width: 128px; }
+.tile .val { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 17px; }
+.tile .lbl { font-size: 11px; color: var(--text2); }
+.tile.photo { padding: 0; overflow: hidden; position: relative; color: #fff; min-height: 132px; }
+.tile.photo .cap { position: absolute; bottom: 12px; left: 12px; }
+.tile.photo .val { color: #fff; }
+.tile.photo .lbl { color: rgba(255,255,255,0.88); }
+.tile.photo .ph { position: absolute; inset: 0; }
+
+/* barre d'action */
+.cta-bar { display: flex; border-radius: 999px; overflow: hidden; background: var(--secondary); color: #fff;
+  font-weight: 600; font-size: 14px; }
+.cta-bar div { flex: 1; text-align: center; padding: 14px 0; }
+.cta-bar div + div { background: var(--primary); }
+
+/* barre d'onglets */
+.tabbar { display: flex; justify-content: space-between; padding: 12px 6px 2px; color: var(--tertiary); }
+.tabbar svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; }
+.tabbar .on { color: var(--secondary); }
+
+/* pastille utilisateur */
+.chiprow { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; }
+
+/* logo ✱ */
+.ast-mark { color: var(--primary); font-weight: 700; }
+
+/* icônes SVG génériques */
+svg.ic { width: 16px; height: 16px; stroke: var(--secondary); fill: none; stroke-width: 1.8;
+  stroke-linecap: round; stroke-linejoin: round; display: block; }
+.av svg.ic { stroke: var(--primary-dark); }
+.emoji svg.ic { width: 20px; height: 20px; stroke: var(--primary-dark); }
+.av-sm svg.ic, .ava svg.ic { width: 15px; height: 15px; }
+.eye { display: flex; gap: 8px; }
+.eye svg.ic { stroke: var(--text2); }
+.ava svg.ic { stroke: var(--primary-dark); }
+.copy svg.ic, .gear svg.ic, .menu svg.ic { stroke: var(--text2); }
+
+/* avatars initiales */
+.av.ph-a { background: linear-gradient(140deg, #C06CE8, #8E3FBE); color: #fff; font-size: 11px; font-weight: 700; }
+.av.ph-b { background: linear-gradient(140deg, #6C6478, #241B2E); color: #fff; font-size: 11px; font-weight: 700; }
+
+/* drapeau Bénin */
+.flag-bj { display: inline-flex; width: 16px; height: 11px; border-radius: 2px; overflow: hidden;
+  vertical-align: -1px; }
+.flag-bj i { display: block; }
+.flag-bj i:nth-child(1) { width: 6px; height: 11px; background: #008751; }
+.flag-bj i:nth-child(2) { width: 10px; height: 5.5px; background: #FCD116; }
+.flag-bj i:nth-child(3) { width: 10px; height: 5.5px; background: #E8112D; margin-left: -10px; margin-top: 5.5px; }
+
+/* châssis téléphone */
+.phone-frame { background: #141018; border-radius: 42px; padding: 9px; box-shadow: 0 40px 80px rgba(36,27,46,0.35);
+  position: relative; }
+.phone-frame .scr { background: var(--bg); border-radius: 34px; overflow: hidden; position: relative; height: 100%; }
+.phone-frame .notch { position: absolute; z-index: 5; top: 8px; left: 50%; transform: translateX(-50%);
+  width: 86px; height: 20px; border-radius: 12px; background: #141018; }
