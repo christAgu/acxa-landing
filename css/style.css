@@ -692,7 +692,7 @@ body.page-light .solution-card p { color: #52607a; }
   .nav-links .nav-link::after { display: none; }
 
   .hero {
-    padding-top: calc(var(--nav-h) + 48px);
+    padding-top: calc(var(--nav-h) + 88px);
   }
 
   .hero-inner {
