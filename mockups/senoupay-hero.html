@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Senou Pay — Mockup hero</title>
+<link rel="stylesheet" href="ui.css">
+<style>
+  html, body { width: 1200px; height: 628px; overflow: hidden; }
+  body {
+    background:
+      radial-gradient(70% 90% at 78% 15%, rgba(192,108,232,0.35) 0%, transparent 60%),
+      linear-gradient(160deg, #1B1424 0%, var(--secondary) 55%, #170F1F 100%);
+    color: #fff; position: relative;
+  }
+  .glowline { position: absolute; width: 1000px; height: 300px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(192,108,232,0.30), transparent 65%);
+    left: 520px; top: 110px; filter: blur(30px); }
+
+  .copy { position: absolute; left: 76px; top: 150px; width: 430px; }
+  .copy .eyebrow { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 13px;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--primary); }
+  .copy h1 { font-family: "Montserrat", Arial, sans-serif; font-weight: 800; font-size: 46px; line-height: 1.06;
+    letter-spacing: -0.015em; margin-top: 14px; text-transform: uppercase; }
+  .copy p { margin-top: 18px; font-size: 16px; line-height: 1.55; color: #E3D6EC; }
+  .badges { display: flex; gap: 10px; margin-top: 26px; }
+  .badge { border: 1px solid rgba(231,216,241,0.35); border-radius: 999px; padding: 9px 16px; font-size: 13px;
+    font-weight: 600; }
+  .badge.fill { background: var(--primary); border-color: transparent; }
+
+  /* téléphone principal */
+  .dev { position: absolute; right: 330px; top: 34px; width: 262px; height: 566px; }
+  .dev .phone-frame { width: 100%; height: 100%; }
+  .dev .scr { padding: 38px 16px 16px; font-size: 12.5px; color: var(--secondary); }
+
+  /* carte flottante */
+  .float-card { position: absolute; right: 74px; top: 96px; width: 226px; transform: rotate(9deg); }
+  .float-card .sp-card { width: 100%; box-shadow: 0 30px 60px rgba(0,0,0,0.45); }
+
+  /* pastilles flottantes */
+  .bubble { position: absolute; background: #fff; color: var(--secondary); border-radius: 16px; padding: 12px 14px;
+    box-shadow: 0 22px 44px rgba(0,0,0,0.30); font-size: 12.5px; font-weight: 600; display: flex; gap: 10px;
+    align-items: center; }
+  .bubble .av { width: 30px; height: 30px; border-radius: 50%; background: var(--soft); display: grid; place-items: center; }
+  .bubble .sub { font-weight: 500; color: var(--text2); font-size: 11px; }
+  .b1 { right: 62px; top: 316px; transform: rotate(-4deg); }
+  .b2 { right: 112px; top: 414px; transform: rotate(3deg); }
+  .b2 .amt { color: var(--success); }
+
+  h3 { font-size: 19px; }
+  .tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px; margin-top: 12px; }
+  .tile { min-width: 0; }
+  .tile .val { white-space: nowrap; font-size: 15px; }
+  .s-money .tx:nth-of-type(n+4), .s-money .tabbar { display: none; }
+  .logo-dot { width: 24px; height: 24px; border-radius: 50%; background: var(--primary); color: #fff;
+    display: grid; place-items: center; font-size: 14px; margin-bottom: 18px; }
+  .emoji { margin-bottom: 18px; }
+  .ph.g1 { background: linear-gradient(150deg, #6b4a7d, #C06CE8 55%, #f0c36b); }
+  .ph.g2 { background: linear-gradient(150deg, #2E9E5B, #7fbf8a 50%, #C06CE8); }
+  .sect { margin-top: 14px; font-size: 12px; font-weight: 600; }
+  .cta-bar { margin-top: 10px; font-size: 13px; }
+  .cta-bar div { padding: 12px 0; }
+</style>
+</head>
+<body>
+  <div class="glowline"></div>
+
+  <div class="copy">
+    <p class="eyebrow">Senou Pay</p>
+    <h1>Votre argent,<br>sans frontières</h1>
+    <p>Envoyez, recevez et suivez votre argent entre l'Europe et le Bénin — en un seul clic, pas en plusieurs jours.</p>
+    <div class="badges">
+      <span class="badge fill">Transfert instantané</span>
+      <span class="badge">Carte Visa</span>
+      <span class="badge">Compte commun</span>
+    </div>
+  </div>
+
+  <div class="dev"><div class="phone-frame"><div class="notch"></div><div class="scr" id="a"></div></div></div>
+  <div class="float-card">
+    <div class="sp-card">
+      <div class="chip"></div><div class="ast">✱</div>
+      <div class="mark">Senou Pay</div><div class="visa">VISA</div>
+    </div>
+  </div>
+
+  <div class="bubble b1"><span class="av ph-a">LG</span><span>Laura Gomez<br><span class="sub">Transfert reçu</span></span><span class="amt">+ 45 000 F</span></div>
+  <div class="bubble b2"><span class="av ph-b">MS</span><span>Marion Sossou<br><span class="sub">Compte commun</span></span><span class="amt">+ 120 000 F</span></div>
+
+<script src="screens.js"></script>
+<script>document.getElementById('a').innerHTML = screenMoney();</script>
+</body>
+</html>
