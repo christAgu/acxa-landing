@@ -401,12 +401,35 @@ body {
   width: min(100%, 520px);
   height: auto;
   border-radius: 20px;
+  border: 1px solid rgba(160, 192, 255, 0.55);
   box-shadow:
-    0 24px 70px rgba(2, 6, 18, 0.55),
-    0 0 60px rgba(192, 108, 232, 0.18);
+    0 0 0 1px rgba(91, 141, 255, 0.25),
+    0 0 18px rgba(120, 162, 255, 0.45),
+    0 0 48px rgba(46, 107, 255, 0.28),
+    0 24px 70px rgba(2, 6, 18, 0.55);
+  animation: card-breathe 5.5s ease-in-out infinite;
   transition: transform 0.3s ease;
 }
 .product-logo-card:hover { transform: translateY(-4px) scale(1.01); }
+
+@keyframes card-breathe {
+  0%, 100% {
+    border-color: rgba(160, 192, 255, 0.45);
+    box-shadow:
+      0 0 0 1px rgba(91, 141, 255, 0.20),
+      0 0 14px rgba(120, 162, 255, 0.35),
+      0 0 40px rgba(46, 107, 255, 0.22),
+      0 24px 70px rgba(2, 6, 18, 0.55);
+  }
+  50% {
+    border-color: rgba(190, 212, 255, 0.75);
+    box-shadow:
+      0 0 0 1px rgba(120, 162, 255, 0.35),
+      0 0 24px rgba(140, 178, 255, 0.60),
+      0 0 64px rgba(46, 107, 255, 0.38),
+      0 24px 70px rgba(2, 6, 18, 0.55);
+  }
+}
 
 @media (max-width: 900px) {
   .product-features { justify-content: center; }
