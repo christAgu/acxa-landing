@@ -587,6 +587,10 @@ body.page-light .site-footer {
   background: #050c1d;
 }
 
+body.page-light .hero-copy {
+  text-shadow: none;
+}
+
 body.page-light .hero-copy h1 {
   background: none;
   -webkit-text-fill-color: initial;
