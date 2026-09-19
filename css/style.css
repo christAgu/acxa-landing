@@ -340,6 +340,80 @@ body {
   border: 1px solid rgba(91, 141, 255, 0.28);
 }
 
+/* ---------- Products page ---------- */
+.product-features {
+  display: flex;
+  gap: clamp(20px, 4vw, 48px);
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.product-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+}
+
+.product-visual-glow {
+  position: absolute;
+  width: 115%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    rgba(192, 108, 232, 0.20) 0%,
+    rgba(46, 107, 255, 0.10) 45%,
+    transparent 70%);
+  filter: blur(8px);
+  z-index: 1;
+}
+
+.product-logo-card {
+  position: relative;
+  z-index: 2;
+  width: min(60%, 300px);
+  height: auto;
+  border-radius: 20px;
+  border: 1.5px solid rgba(200, 218, 255, 0.85);
+  box-shadow:
+    0 0 0 1px rgba(140, 178, 255, 0.55),
+    0 0 26px rgba(160, 192, 255, 0.75),
+    0 0 70px rgba(70, 125, 255, 0.50),
+    0 0 120px rgba(46, 107, 255, 0.30),
+    0 24px 70px rgba(2, 6, 18, 0.55);
+  animation: card-breathe 5.5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+.product-logo-card:hover { transform: translateY(-4px) scale(1.01); }
+
+@keyframes card-breathe {
+  0%, 100% {
+    border-color: rgba(190, 212, 255, 0.75);
+    box-shadow:
+      0 0 0 1px rgba(140, 178, 255, 0.45),
+      0 0 22px rgba(160, 192, 255, 0.60),
+      0 0 60px rgba(70, 125, 255, 0.40),
+      0 0 100px rgba(46, 107, 255, 0.24),
+      0 24px 70px rgba(2, 6, 18, 0.55);
+  }
+  50% {
+    border-color: rgba(230, 240, 255, 1);
+    box-shadow:
+      0 0 0 1px rgba(170, 200, 255, 0.70),
+      0 0 34px rgba(180, 206, 255, 0.95),
+      0 0 90px rgba(90, 140, 255, 0.60),
+      0 0 150px rgba(46, 107, 255, 0.40),
+      0 24px 70px rgba(2, 6, 18, 0.55);
+  }
+}
+
+@media (max-width: 900px) {
+  .product-features { justify-content: center; }
+  .product-visual { min-height: 0; margin-top: 16px; }
+  .product-logo-card { width: min(52vw, 220px); }
+}
+
 /* ---------- Solutions page ---------- */
 .solutions-hero {
   position: relative;
@@ -493,6 +567,83 @@ body {
   margin-top: 40px;
   font-size: 12.5px;
   color: rgba(147, 165, 196, 0.6);
+}
+
+/* ---------- Light page variant (Solutions / Produits) ---------- */
+body.page-light {
+  background: #ffffff;
+}
+
+body.page-light .hero-wave { display: none; }
+
+body.page-light .site-nav {
+  background: #050c1d;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.page-light .site-footer {
+  background: #050c1d;
+}
+
+body.page-light .hero-copy {
+  text-shadow: none;
+}
+
+body.page-light .hero-copy h1 {
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: #0b1a3a;
+  filter: none;
+  animation: none;
+}
+
+body.page-light .solutions-title { color: #0b1a3a; }
+
+body.page-light .hero-sub,
+body.page-light .solutions-sub {
+  color: #4a5568;
+}
+
+body.page-light .section-eyebrow {
+  color: var(--accent);
+}
+
+body.page-light .feature {
+  color: #334155;
+}
+
+body.page-light .solution-card {
+  background: #f6f8fc;
+  border-color: rgba(11, 26, 58, 0.08);
+}
+body.page-light .solution-card:hover {
+  border-color: rgba(46, 107, 255, 0.35);
+  box-shadow: 0 16px 40px rgba(11, 26, 58, 0.10);
+}
+body.page-light .solution-card h3 { color: #0b1a3a; }
+body.page-light .solution-card p { color: #52607a; }
+
+/* ---------- Light footer variant (Accueil) ---------- */
+.site-footer.footer-light {
+  background: #ffffff;
+  border-top: 1px solid rgba(11, 26, 58, 0.10);
+}
+.site-footer.footer-light .footer-logo { filter: brightness(0); }
+.site-footer.footer-light .footer-tagline { color: #52607a; }
+.site-footer.footer-light .footer-col { color: #52607a; }
+.site-footer.footer-light .footer-col a { color: #0b1a3a; }
+.site-footer.footer-light .footer-col a:hover { color: var(--accent); }
+.site-footer.footer-light .footer-copy { color: rgba(11, 26, 58, 0.5); }
+.site-footer.footer-light .footer-social a {
+  color: #52607a;
+  border-color: rgba(11, 26, 58, 0.15);
+}
+.site-footer.footer-light .footer-social a:hover {
+  color: #0b1a3a;
+  border-color: var(--accent);
+  background: rgba(46, 107, 255, 0.08);
 }
 
 /* ---------- Responsive ---------- */
