@@ -142,30 +142,30 @@ body {
   color: var(--ink);
   background: linear-gradient(155deg,
     #ffffff 0%,
-    #dfe8f7 28%,
-    #9fb4d8 46%,
+    #f4f4f5 28%,
+    #d9d9db 46%,
     #ffffff 62%,
-    #aebfdd 80%,
-    #e8f0fd 100%);
+    #e6e6e8 80%,
+    #fafafa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: none;
   filter:
-    drop-shadow(0 0 8px rgba(150, 185, 255, 0.22))
-    drop-shadow(0 0 26px rgba(46, 107, 255, 0.12));
+    drop-shadow(0 0 10px rgba(255, 255, 255, 0.45))
+    drop-shadow(0 0 30px rgba(255, 255, 255, 0.22));
   animation: title-breathe 5.5s ease-in-out infinite;
 }
 .hero-copy h1 span { display: block; }
 
 @keyframes title-breathe {
   0%, 100% {
-    filter: drop-shadow(0 0 6px rgba(150, 185, 255, 0.18))
-            drop-shadow(0 0 22px rgba(46, 107, 255, 0.10));
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.35))
+            drop-shadow(0 0 26px rgba(255, 255, 255, 0.18));
   }
   50% {
-    filter: drop-shadow(0 0 10px rgba(170, 198, 255, 0.30))
-            drop-shadow(0 0 32px rgba(46, 107, 255, 0.17));
+    filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.55))
+            drop-shadow(0 0 38px rgba(255, 255, 255, 0.30));
   }
 }
 
