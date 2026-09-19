@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Mockup Senou Pay — Carte</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #C06CE8;
+    --secondary: #241B2E;
+    --tertiary: #C9A9D4;
+    --bg: #FCFAFE;
+    --soft: #E7D8F1;
+    --text2: #6C6478;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 420px; height: 750px; overflow: hidden; }
+  body {
+    font-family: "Hanken Grotesk", Arial, sans-serif;
+    color: #fff;
+    background:
+      radial-gradient(120% 70% at 85% 10%, #3a2a4a 0%, transparent 55%),
+      radial-gradient(90% 60% at 10% 100%, #4a2a5c 0%, transparent 60%),
+      linear-gradient(170deg, #1a1322 0%, var(--secondary) 45%, #1c1425 100%);
+    position: relative;
+  }
+  .stripe {
+    position: absolute; width: 900px; height: 260px;
+    background: linear-gradient(90deg, rgba(192,108,232,0.10), rgba(192,108,232,0.30), rgba(192,108,232,0.08));
+    transform: rotate(-32deg); filter: blur(2px);
+  }
+  .stripe.a { top: 110px; left: -300px; }
+  .stripe.b { top: 470px; left: -200px; opacity: 0.7; }
+
+  .headline {
+    position: absolute; top: 26px; left: 0; right: 0; text-align: center;
+    font-family: "Space Grotesk", Arial, sans-serif;
+    font-weight: 700; font-size: 34px; line-height: 1.05;
+    letter-spacing: -0.02em; text-transform: uppercase;
+    color: var(--primary);
+  }
+  .headline span { display: block; }
+
+  .phone {
+    position: absolute; left: 50%; top: 118px; transform: translateX(-50%);
+    width: 262px; height: 548px; border-radius: 40px;
+    background: #0f0a15; padding: 10px;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 0 0 2px #2c2236 inset;
+  }
+  .screen {
+    width: 100%; height: 100%; border-radius: 31px;
+    background: var(--bg); color: var(--secondary); overflow: hidden; position: relative;
+    padding: 14px 16px;
+  }
+  .notch {
+    position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
+    width: 78px; height: 22px; background: #0f0a15; border-radius: 14px;
+  }
+  .status { display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; padding: 2px 6px 0; }
+  .status .r { display: flex; gap: 4px; align-items: center; }
+  .bat { width: 18px; height: 9px; border: 1.5px solid var(--secondary); border-radius: 3px; position: relative; }
+  .bat::after { content: ""; position: absolute; inset: 1.5px; background: var(--secondary); border-radius: 1px; }
+
+  .title { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 20px; margin-top: 30px; display: flex; align-items: center; gap: 8px; }
+  .title .ast { color: var(--primary); font-size: 26px; line-height: 0; }
+
+  .card {
+    margin-top: 16px; height: 128px; border-radius: 14px; position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #2c2138 0%, var(--secondary) 45%, #3a2748 100%);
+    box-shadow: 0 12px 26px rgba(36,27,46,0.35);
+    color: #fff; padding: 14px;
+  }
+  .card::before {
+    content: ""; position: absolute; width: 220px; height: 220px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(192,108,232,0.55), transparent 65%);
+    right: -70px; top: -90px;
+  }
+  .card .brand { position: absolute; top: 12px; right: 14px; font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 4px; }
+  .card .brand .ast { color: var(--primary); font-size: 18px; }
+  .chip { width: 30px; height: 22px; border-radius: 5px; background: linear-gradient(135deg, #e9d6a5, #b8975a); position: absolute; top: 40px; left: 14px; }
+  .chip::after { content:""; position:absolute; inset: 5px 8px; border: 1px solid rgba(0,0,0,0.25); border-radius: 3px; }
+  .wave { position: absolute; top: 42px; left: 52px; width: 14px; height: 18px; border: 2px solid rgba(255,255,255,0.7); border-left: 0; border-radius: 0 12px 12px 0; }
+  .num { position: absolute; bottom: 30px; left: 14px; font-size: 12px; letter-spacing: 0.12em; color: var(--tertiary); }
+  .name { position: absolute; bottom: 12px; left: 14px; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+  .visa { position: absolute; bottom: 10px; right: 14px; font-style: italic; font-weight: 800; font-size: 16px; letter-spacing: -0.02em; color: #fff; font-family: Arial, sans-serif; }
+
+  .pill { margin: 14px auto 0; width: max-content; padding: 6px 12px; border-radius: 999px; background: var(--soft); font-size: 11px; font-weight: 600; display: flex; gap: 6px; align-items: center; }
+  .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--primary); }
+
+  .actions { display: flex; justify-content: space-between; margin-top: 16px; padding: 0 4px; }
+  .act { text-align: center; font-size: 10px; font-weight: 500; color: var(--text2); width: 70px; white-space: nowrap; }
+  .act .ic { width: 42px; height: 42px; border-radius: 50%; background: var(--soft); margin: 0 auto 6px; display: grid; place-items: center; color: var(--secondary); }
+  .act svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+  .sect { margin-top: 18px; font-size: 10px; color: var(--text2); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+  .row { display: flex; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--soft); font-size: 12px; font-weight: 500; }
+  .row:last-child { border-bottom: 0; }
+  .row .ic { width: 30px; height: 30px; border-radius: 50%; background: var(--soft); display: grid; place-items: center; }
+  .row svg { width: 14px; height: 14px; stroke: var(--secondary); fill: none; stroke-width: 2; stroke-linecap: round; }
+  .row .chev { margin-left: auto; color: var(--tertiary); }
+
+  .tagline {
+    position: absolute; bottom: 26px; left: 0; right: 0; text-align: center;
+    font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 19px; line-height: 1.2;
+    color: #fff; padding: 0 30px;
+  }
+  .tagline em { color: var(--primary); font-style: normal; }
+</style>
+</head>
+<body>
+  <div class="stripe a"></div><div class="stripe b"></div>
+
+  <div class="headline"><span>Votre argent,</span><span>sans frontières</span></div>
+
+  <div class="phone">
+    <div class="screen">
+      <div class="notch"></div>
+      <div class="status"><span>9:41</span><span class="r">▲▲▲ <span class="bat"></span></span></div>
+
+      <div class="title"><span class="ast">✱</span> Cartes</div>
+
+      <div class="card">
+        <div class="brand"><span class="ast">✱</span>Senou Pay</div>
+        <div class="chip"></div><div class="wave"></div>
+        <div class="num">•••• •••• •••• 1304</div>
+        <div class="name">Kokou Agbessi</div>
+        <div class="visa">VISA</div>
+      </div>
+
+      <div class="pill"><span class="dot"></span> Carte physique • Active</div>
+
+      <div class="actions">
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>Voir le PIN</div>
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>Détails</div>
+        <div class="act"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></div>Nouvelle carte</div>
+      </div>
+
+      <div class="sect">Gérer la carte</div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h16M4 6h16M4 18h16"/></svg></div>Gérer les moyens de paiement<span class="chev">›</span></div>
+      <div class="row"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>Débloquer le PIN<span class="chev">›</span></div>
+    </div>
+  </div>
+
+  <div class="tagline">Payez partout en Europe et au Bénin <em>en un seul clic</em>, pas en plusieurs jours.</div>
+</body>
+</html>
