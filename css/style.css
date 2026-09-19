@@ -31,15 +31,21 @@ body {
   position: fixed;
   inset: 0 0 auto 0;
   height: var(--nav-h);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0 clamp(20px, 5vw, 64px);
   background: rgba(5, 12, 29, 0.55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(147, 165, 196, 0.12);
   z-index: 50;
+}
+
+.nav-inner {
+  max-width: 1240px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-brand { display: flex; align-items: center; }
