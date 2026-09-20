@@ -20,15 +20,14 @@
 (() => {
   const art = document.querySelector('.hero-art');
   if (!art || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const slabs = art.querySelectorAll('.slab');
+  const slabs = art.querySelectorAll('.k-dust, .k-orbit');
   let tx = 0, ty = 0, cx = 0, cy = 0, raf = 0;
   const tick = () => {
     cx += (tx - cx) * 0.08;
     cy += (ty - cy) * 0.08;
     slabs.forEach((s, i) => {
       const k = 6 + i * 3;
-      s.style.marginLeft = `${cx * k}px`;
-      s.style.marginTop = `${cy * k}px`;
+      s.style.transform = `translate(${cx * k}px, ${cy * k}px)`;
     });
     if (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001) raf = requestAnimationFrame(tick);
     else raf = 0;

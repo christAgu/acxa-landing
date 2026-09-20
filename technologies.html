@@ -12,11 +12,11 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/tech.css">
 </head>
-<body class="theme-light">
+<body class="theme-tech">
 
   <header class="site-nav" id="site-nav">
     <a class="nav-brand" href="index.html" aria-label="ACXA Technology — Accueil">
-      <img src="assets/logo/acxa-wordmark-dark.png" alt="ACXA Technology" class="nav-logo">
+      <img src="assets/logo/acxa-wordmark.png" alt="ACXA Technology" class="nav-logo">
     </a>
     <nav class="nav-links" id="nav-links" aria-label="Navigation principale">
       <a href="index.html" class="nav-link">Accueil</a>
@@ -45,9 +45,29 @@
           </div>
         </div>
         <div class="hero-art rv" style="--d:.2s" aria-hidden="true">
-          <div class="hero-steps"></div>
-          <i class="slab"></i><i class="slab"></i><i class="slab"></i><i class="slab"></i><i class="slab"></i>
-          <i class="slab thin"></i><i class="slab thin"></i>
+          <svg viewBox="0 0 600 600">
+            <circle class="k-orbit" cx="300" cy="340" r="262"/>
+            <circle class="k-orbit" cx="300" cy="340" r="190" stroke-dasharray="1 10"/>
+            <g class="k-dust" style="--fd:11s"><circle cx="90" cy="150" r="2.5"/><circle cx="520" cy="120" r="2"/><circle cx="60" cy="380" r="2"/></g>
+            <g class="k-dust" style="--fd:13s;--fdl:-4s"><circle cx="540" cy="330" r="2.5"/><circle cx="470" cy="70" r="1.8"/><circle cx="150" cy="70" r="2"/></g>
+            <g class="k-dust" style="--fd:9s;--fdl:-7s"><circle cx="300" cy="560" r="2"/><circle cx="560" cy="470" r="2"/><circle cx="40" cy="500" r="2.2"/></g>
+            <path class="k-edge" d="M300 90 240 240 180 390 120 540"/>
+            <path class="k-edge" d="M300 90 360 240 420 390 480 540"/>
+            <path class="k-edge" d="M180 390H420"/>
+            <path class="k-edge" d="M240 240H360" stroke-dasharray="3 6"/>
+            <path class="k-pulse" d="M120 540 180 390 240 240 300 90"/>
+            <path class="k-pulse" style="--d:-2.5s" d="M480 540 420 390 360 240 300 90"/>
+            <path class="k-pulse" style="--d:-1.2s" d="M180 390H420"/>
+            <circle class="k-node" cx="240" cy="240" r="6"/>
+            <circle class="k-node" cx="360" cy="240" r="6"/>
+            <circle class="k-node" cx="180" cy="390" r="7"/>
+            <circle class="k-node" cx="420" cy="390" r="7"/>
+            <circle class="k-node" cx="120" cy="540" r="6"/>
+            <circle class="k-node" cx="480" cy="540" r="6"/>
+            <circle class="k-ring" cx="300" cy="90" r="16"/>
+            <circle class="k-ring" style="--d:-2s" cx="300" cy="90" r="16"/>
+            <circle class="k-node hot" cx="300" cy="90" r="9"/>
+          </svg>
         </div>
       </div>
     </section>
@@ -70,32 +90,32 @@
       <div class="wrap">
         <div class="head">
           <div>
-            <span class="chip light rv">Vue d'ensemble</span>
+            <span class="chip rv">Vue d'ensemble</span>
             <h2 class="display rv" style="--d:.08s">Une infrastructure blockchain de confiance</h2>
           </div>
           <p class="rv" style="--d:.16s">Quatre domaines, une même exigence : des registres distribués auditables, conformes et interopérables, conçus pour passer à l'échelle institutionnelle.</p>
         </div>
         <div class="tiles">
           <a href="#tokenisation" class="tile rv">
-            <span class="n">01</span>
+            <span class="ic" data-n="01"><svg viewBox="0 0 32 32"><path d="M4 26h24M6 12h20M8 12v14M14 12v14M20 12v14M26 12v14M16 4l12 8H4z"/></svg></span>
             <h3>Tokenisation d'actifs financiers</h3>
             <p>Dépôts tokenisés, obligations numériques, private equity.</p>
             <span class="go">Découvrir</span>
           </a>
           <a href="#rwa" class="tile rv" style="--d:.1s">
-            <span class="n">02</span>
+            <span class="ic" data-n="02"><svg viewBox="0 0 32 32"><path d="M5 24h22l-3-9H8zM9 15l2-7h10l2 7M12 20h8"/></svg></span>
             <h3>Tokenisation d'actifs réels</h3>
             <p>Or et métaux précieux, immobilier commercial fractionné.</p>
             <span class="go">Découvrir</span>
           </a>
           <a href="#secteur-public" class="tile rv" style="--d:.2s">
-            <span class="n">03</span>
+            <span class="ic" data-n="03"><svg viewBox="0 0 32 32"><path d="M16 4l11 5v8c0 6-5 10-11 13C10 27 5 23 5 17V9z"/><path d="M11 16l3 3 6-7"/></svg></span>
             <h3>Administration &amp; secteur public</h3>
             <p>Cadastre numérique, identité souveraine, vote sécurisé.</p>
             <span class="go">Découvrir</span>
           </a>
           <a href="#logistique" class="tile rv" style="--d:.3s">
-            <span class="n">04</span>
+            <span class="ic" data-n="04"><svg viewBox="0 0 32 32"><rect x="3" y="10" width="26" height="13"/><path d="M9 10v13M15 10v13M21 10v13M8 6h16M12 6V4h8v2"/></svg></span>
             <h3>Logistique &amp; supply chain</h3>
             <p>Documents scellés on-chain, paiements déclenchés par l'IoT.</p>
             <span class="go">Découvrir</span>
@@ -123,8 +143,8 @@
               <div class="facts"><span>Adossés à 100 %</span><span>RTGS 24h/24</span><span>Zéro risque de change</span></div>
             </div>
             <div class="pane-wrap rv" style="--d:.12s">
-              <div class="pane"><span class="tag"><b>24/7</b> règlement brut en temps réel</span><div class="art bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-              <span class="bracket"></span>
+              <div class="pane"><div class="art"><svg viewBox="0 0 400 260"><path class="ln dim" d="M20 130H380"/><path class="dash" d="M20 130H380"/><g class="blink" style="--bd:2.8s;--d:0.0s"><rect class="fl hi" x="52" y="104" width="52" height="52"/><rect class="fl" x="66" y="118" width="24" height="24"/></g><g class="blink" style="--bd:2.8s;--d:0.7s"><rect class="fl hi" x="140" y="104" width="52" height="52"/><rect class="fl" x="154" y="118" width="24" height="24"/></g><g class="blink" style="--bd:2.8s;--d:1.4s"><rect class="fl hi" x="228" y="104" width="52" height="52"/><rect class="fl" x="242" y="118" width="24" height="24"/></g><g class="blink" style="--bd:2.8s;--d:2.0999999999999996s"><rect class="fl hi" x="316" y="104" width="52" height="52"/><rect class="fl" x="330" y="118" width="24" height="24"/></g><text class="txt" x="78" y="184" text-anchor="middle">#01</text><text class="txt" x="166" y="184" text-anchor="middle">#02</text><text class="txt" x="254" y="184" text-anchor="middle">#03</text><text class="txt" x="342" y="184" text-anchor="middle">#04</text><g class="float" style="--fd:9s"><circle class="fl hi" cx="78" cy="58" r="13"/><path class="ln hi" d="M72 58h12M78 52v12"/></g><g class="float" style="--fd:11s;--fdl:-4s"><circle class="fl hi" cx="254" cy="52" r="13"/><path class="ln hi" d="M248 52h12M254 46v12"/></g><path class="ln dim" d="M78 71v33M254 65v39" stroke-dasharray="2 5"/><text class="txt hi" x="380" y="72" text-anchor="end">RTGS · 24/7</text></svg></div><span class="tag"><b>24/7</b> règlement brut en temps réel</span></div>
+              <span class="mk"></span><span class="mk"></span><span class="mk"></span><span class="mk"></span>
             </div>
           </div>
 
@@ -135,8 +155,8 @@
               <div class="facts"><span>Obligations d'entreprises</span><span>Bons du Trésor</span><span>Green Bonds</span><span>Coupons automatisés</span></div>
             </div>
             <div class="pane-wrap rv" style="--d:.12s">
-              <div class="pane v3"><span class="tag">Coupons versés <b>automatiquement</b></span><div class="art rings"><i></i><i></i><i></i><i></i><i></i></div></div>
-              <span class="bracket"></span>
+              <div class="pane"><div class="art"><svg viewBox="0 0 400 260"><rect class="fl" x="40" y="40" width="190" height="136"/><path class="ln dim" d="M60 68h110M60 90h150M60 112h90M60 134h130"/><circle class="fl hi" cx="200" cy="150" r="14"/><path class="ln hi" d="M194 150l4 4 8-9"/><text class="txt" x="60" y="200">OBLIGATION · SMART CONTRACT</text><path class="ln dim" d="M214 150C250 150 262 96 326 96V128" stroke-dasharray="2 6"/><path class="ln" d="M280 200h92v26h-92z"/><path class="ln dim" d="M280 200l8-14h76l8 14"/><g class="drop" style="--d:0s"><circle class="fl hi" cx="326" cy="188" r="11"/></g><g class="drop" style="--d:1.2s"><circle class="fl hi" cx="326" cy="188" r="11"/></g><g class="drop" style="--d:2.4s"><circle class="fl hi" cx="326" cy="188" r="11"/></g><text class="txt hi" x="326" y="70" text-anchor="middle">COUPONS</text></svg></div><span class="tag">Coupons versés <b>automatiquement</b></span></div>
+              <span class="mk"></span><span class="mk"></span><span class="mk"></span><span class="mk"></span>
             </div>
           </div>
 
@@ -147,8 +167,8 @@
               <div class="facts"><span>Parts de fonds</span><span>Capital-investissement</span><span>OTC institutionnel</span></div>
             </div>
             <div class="pane-wrap rv" style="--d:.12s">
-              <div class="pane v2"><span class="tag">Transferts <b>de gré à gré</b> simplifiés</span><div class="art slabs"><i></i><i></i><i></i><i></i></div></div>
-              <span class="bracket"></span>
+              <div class="pane"><div class="art"><svg viewBox="0 0 400 260"><circle class="fl" cx="80" cy="130" r="36"/><circle class="fl" cx="320" cy="130" r="36"/><text class="txt" x="80" y="134" text-anchor="middle">LP · A</text><text class="txt" x="320" y="134" text-anchor="middle">LP · B</text><path class="ln dim" d="M110 110Q200 40 290 110"/><path class="trail" d="M110 110Q200 40 290 110"/><path class="ln dim" d="M290 150Q200 220 110 150"/><path class="trail" style="--d:-2s" d="M290 150Q200 220 110 150"/><g class="float" style="--fd:8s"><polygon class="fl hi" points="200,110 218,120 218,140 200,150 182,140 182,120"/><text class="txt hi" x="200" y="134" text-anchor="middle">P</text></g><text class="txt" x="200" y="26" text-anchor="middle">TRANSFERT DE PARTS</text><text class="txt" x="200" y="244" text-anchor="middle">RÈGLEMENT ATOMIQUE</text></svg></div><span class="tag">Transferts <b>de gré à gré</b> simplifiés</span></div>
+              <span class="mk"></span><span class="mk"></span><span class="mk"></span><span class="mk"></span>
             </div>
           </div>
         </div>
@@ -174,8 +194,8 @@
               <div class="facts"><span>1 jeton = 1 g d'or</span><span>Coffre-fort audité</span><span>Audit tiers temps réel</span></div>
             </div>
             <div class="pane-wrap rv" style="--d:.12s">
-              <div class="pane v4"><span class="tag"><b>1 jeton</b> = 1 gramme d'or certifié</span><div class="art discs"><i></i><i></i><i></i><i></i></div></div>
-              <span class="bracket"></span>
+              <div class="pane"><div class="art"><svg viewBox="0 0 400 260"><ellipse class="ln dim" cx="205" cy="150" rx="176" ry="62" stroke-dasharray="2 8"/><polygon class="fl" points="60,200 82,164 190,164 200,200"/><polygon class="fl" points="210,200 220,164 328,164 350,200"/><polygon class="fl" points="130,164 152,128 260,128 282,164"/><path class="ln dim" d="M82 164h108M220 164h108M152 128h108" opacity=".5"/><text class="txt" x="206" y="150" text-anchor="middle">999.9 · 1 g</text><circle class="ping" cx="206" cy="146" r="12"/><circle class="ping" style="--d:-1.6s" cx="206" cy="146" r="12"/><circle class="lit orbit" r="7"/><text class="txt hi" x="206" y="236" text-anchor="middle">1 JETON = 1 GRAMME AUDITÉ</text></svg></div><span class="tag"><b>1 jeton</b> = 1 gramme d'or certifié</span></div>
+              <span class="mk"></span><span class="mk"></span><span class="mk"></span><span class="mk"></span>
             </div>
           </div>
 
@@ -186,8 +206,8 @@
               <div class="facts"><span>Conformité locale</span><span>Revenus locatifs automatisés</span></div>
             </div>
             <div class="pane-wrap rv" style="--d:.12s">
-              <div class="pane"><span class="tag">Loyers redistribués <b>on-chain</b></span><div class="art cells"><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i></div></div>
-              <span class="bracket"></span>
+              <div class="pane"><div class="art"><svg viewBox="0 0 400 260"><rect class="fl" x="60" y="40" width="150" height="184"/><rect class="fl hi blink" style="--bd:2.4s;--d:0.0s" x="78" y="58" width="18" height="14"/><rect class="fl hi blink" style="--bd:3.5999999999999996s;--d:2.7s" x="112" y="58" width="18" height="14"/><rect class="fl hi blink" style="--bd:4.8s;--d:1.4s" x="146" y="58" width="18" height="14"/><rect class="fl hi blink" style="--bd:3.0s;--d:0.09999999999999964s" x="180" y="58" width="18" height="14"/><rect class="fl hi blink" style="--bd:4.199999999999999s;--d:2.8s" x="78" y="90" width="18" height="14"/><rect class="fl hi blink" style="--bd:2.4s;--d:1.5s" x="112" y="90" width="18" height="14"/><rect class="fl hi blink" style="--bd:3.5999999999999996s;--d:0.1999999999999993s" x="146" y="90" width="18" height="14"/><rect class="fl hi blink" style="--bd:4.8s;--d:2.9000000000000004s" x="180" y="90" width="18" height="14"/><rect class="fl hi blink" style="--bd:3.0s;--d:1.5999999999999996s" x="78" y="122" width="18" height="14"/><rect class="fl hi blink" style="--bd:4.199999999999999s;--d:0.29999999999999893s" x="112" y="122" width="18" height="14"/><rect class="fl hi blink" style="--bd:2.4s;--d:3.0s" x="146" y="122" width="18" height="14"/><rect class="fl hi blink" style="--bd:3.5999999999999996s;--d:1.6999999999999993s" x="180" y="122" width="18" height="14"/><rect class="fl hi blink" style="--bd:4.8s;--d:0.3999999999999986s" x="78" y="154" width="18" height="14"/><rect class="fl hi blink" style="--bd:3.0s;--d:3.099999999999998s" x="112" y="154" width="18" height="14"/><rect class="fl hi blink" style="--bd:4.199999999999999s;--d:1.8000000000000007s" x="146" y="154" width="18" height="14"/><rect class="fl hi blink" style="--bd:2.4s;--d:0.5s" x="180" y="154" width="18" height="14"/><rect class="fl hi blink" style="--bd:3.5999999999999996s;--d:3.1999999999999993s" x="78" y="186" width="18" height="14"/><rect class="fl hi blink" style="--bd:4.8s;--d:1.8999999999999986s" x="112" y="186" width="18" height="14"/><rect class="fl hi blink" style="--bd:3.0s;--d:0.5999999999999979s" x="146" y="186" width="18" height="14"/><rect class="fl hi blink" style="--bd:4.199999999999999s;--d:3.3000000000000007s" x="180" y="186" width="18" height="14"/><path class="ln dim" d="M60 104h150M60 168h150" stroke-dasharray="4 6"/><path class="ln dim" d="M210 72h110M210 136h110M210 196h110"/><path class="dash" d="M210 72h110"/><path class="dash" d="M210 136h110"/><path class="dash" d="M210 196h110"/><circle class="fl" cx="338" cy="72" r="16"/><circle class="fl" cx="338" cy="136" r="16"/><circle class="fl" cx="338" cy="196" r="16"/><text class="txt" x="338" y="76" text-anchor="middle">1/3</text><text class="txt" x="338" y="140" text-anchor="middle">1/3</text><text class="txt" x="338" y="200" text-anchor="middle">1/3</text><text class="txt hi" x="338" y="236" text-anchor="middle">DÉTENTEURS</text></svg></div><span class="tag">Loyers redistribués <b>on-chain</b></span></div>
+              <span class="mk"></span><span class="mk"></span><span class="mk"></span><span class="mk"></span>
             </div>
           </div>
         </div>
@@ -213,8 +233,8 @@
               <div class="facts"><span>Cadastre DLT immuable</span><span>GPS scellé</span><span>Délivrance en quelques heures</span></div>
             </div>
             <div class="pane-wrap rv" style="--d:.12s">
-              <div class="pane v2"><span class="tag">Titre délivré en <b>quelques heures</b></span><div class="art cells"><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i class="on"></i></div></div>
-              <span class="bracket"></span>
+              <div class="pane"><div class="art"><svg viewBox="0 0 400 260"><polygon class="fl" points="30,60 150,40 170,120 60,140"/><polygon class="fl" points="150,40 300,30 320,110 170,120"/><polygon class="fl" points="60,140 170,120 190,210 80,230"/><polygon class="fl" points="300,30 380,50 386,124 320,110"/><polygon class="fl hi" points="170,120 320,110 340,200 190,210"/><rect class="fl" x="245" y="158" width="20" height="16"/><path class="ln" d="M249 158v-6a6 6 0 0 1 12 0v6"/><text class="txt" x="255" y="194" text-anchor="middle">#4F2A · SCELLÉ</text><circle class="ping" cx="170" cy="120" r="8"/><circle class="ping" style="--d:-1.1s" cx="320" cy="110" r="8"/><circle class="ping" style="--d:-2.2s" cx="190" cy="210" r="8"/><circle class="lit" cx="170" cy="120" r="3.5"/><circle class="lit" cx="320" cy="110" r="3.5"/><circle class="lit" cx="190" cy="210" r="3.5"/><circle class="lit" cx="340" cy="200" r="3.5"/><text class="txt hi" x="30" y="236">GPS · 6.37°N 2.39°E</text></svg></div><span class="tag">Titre délivré en <b>quelques heures</b></span></div>
+              <span class="mk"></span><span class="mk"></span><span class="mk"></span><span class="mk"></span>
             </div>
           </div>
 
@@ -225,8 +245,8 @@
               <div class="facts"><span>Hyperledger Aries / Indy</span><span>Verifiable Credentials</span><span>KYC automatisé</span></div>
             </div>
             <div class="pane-wrap rv" style="--d:.12s">
-              <div class="pane v3"><span class="tag">KYC <b>sans base centrale</b></span><div class="art rings"><i></i><i></i><i></i><i></i><i></i></div></div>
-              <span class="bracket"></span>
+              <div class="pane"><div class="art"><svg viewBox="0 0 400 260"><rect class="fl" x="40" y="70" width="180" height="120" rx="6"/><circle class="fl hi" cx="85" cy="116" r="20"/><circle class="ln" cx="85" cy="110" r="7"/><path class="ln" d="M73 130a12 12 0 0 1 24 0"/><path class="ln dim" d="M120 106h80M120 124h60M60 164h140"/><rect class="fl hi" x="180" y="84" width="24" height="18"/><path class="ln dim" d="M220 130h60"/><path class="dash" d="M220 130h60"/><path class="fl" d="M330 62l44 18v42c0 32-22 52-44 62-22-10-44-30-44-62V80z"/><path class="ln hi draw" stroke-width="2.5" d="M311 128l13 13 27-30"/><text class="txt hi" x="330" y="216" text-anchor="middle">VÉRIFIÉ · SANS BDD</text><text class="txt" x="40" y="52">IDENTIFIANT VÉRIFIABLE</text></svg></div><span class="tag">KYC <b>sans base centrale</b></span></div>
+              <span class="mk"></span><span class="mk"></span><span class="mk"></span><span class="mk"></span>
             </div>
           </div>
 
@@ -237,8 +257,8 @@
               <div class="facts"><span>Dépouillement temps réel</span><span>Auditabilité totale</span><span>Anonymat absolu</span></div>
             </div>
             <div class="pane-wrap rv" style="--d:.12s">
-              <div class="pane"><span class="tag">Dépouillement <b>en temps réel</b></span><div class="art bars"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-              <span class="bracket"></span>
+              <div class="pane"><div class="art"><svg viewBox="0 0 400 260"><rect class="fl" x="60" y="132" width="140" height="90"/><rect fill="#050c1d" x="104" y="129" width="52" height="6"/><path class="ln dim" d="M60 160h140"/><g class="drop" style="--d:0s"><rect class="fl hi" x="118" y="86" width="24" height="34"/></g><g class="drop" style="--d:1.8s"><rect class="fl hi" x="118" y="86" width="24" height="34"/></g><text class="txt" x="250" y="70">DÉPOUILLEMENT · LIVE</text><path class="ln dim" d="M250 92h120M250 132h120M250 172h120"/><rect class="grow" fill="#5b8dff" x="250" y="88" width="102" height="8" style="--d:0s"/><rect class="grow" fill="#5b8dff" x="250" y="128" width="64" height="8" style="--d:.3s"/><rect class="grow" fill="#5b8dff" x="250" y="168" width="82" height="8" style="--d:.6s"/><text class="txt hi" x="250" y="212">ANONYME · AUDITABLE</text></svg></div><span class="tag">Dépouillement <b>en temps réel</b></span></div>
+              <span class="mk"></span><span class="mk"></span><span class="mk"></span><span class="mk"></span>
             </div>
           </div>
         </div>
@@ -264,8 +284,8 @@
               <div class="facts"><span>Lettres de crédit</span><span>Bill of Lading</span><span>Authenticité garantie</span></div>
             </div>
             <div class="pane-wrap rv" style="--d:.12s">
-              <div class="pane v4"><span class="tag">Documents <b>scellés on-chain</b></span><div class="art slabs"><i></i><i></i><i></i><i></i></div></div>
-              <span class="bracket"></span>
+              <div class="pane"><div class="art"><svg viewBox="0 0 400 260"><rect class="fl" x="80" y="72" width="140" height="170" opacity=".45"/><rect class="fl" x="90" y="61" width="140" height="170" opacity=".7"/><rect class="fl" x="100" y="50" width="140" height="170"/><path class="ln dim" d="M120 84h100M120 104h80M120 124h100M120 144h60M120 164h90"/><rect class="scan" fill="#5b8dff" x="100" y="60" width="140" height="2" style="filter:drop-shadow(0 0 6px #5b8dff)"/><polygon class="fl hi" points="222,186 238,195 238,213 222,222 206,213 206,195"/><circle class="ping" cx="222" cy="204" r="14"/><text class="txt hi" x="266" y="112">SHA-256</text><text class="txt" x="266" y="132">7f3a…9c1e</text><text class="txt" x="266" y="152">B/L · L/C</text><text class="txt hi" x="266" y="184">ON-CHAIN ✓</text></svg></div><span class="tag">Documents <b>scellés on-chain</b></span></div>
+              <span class="mk"></span><span class="mk"></span><span class="mk"></span><span class="mk"></span>
             </div>
           </div>
 
@@ -276,8 +296,8 @@
               <div class="facts"><span>Température · GPS · Portes</span><span>Chaîne du froid</span><span>Paiement instantané</span></div>
             </div>
             <div class="pane-wrap rv" style="--d:.12s">
-              <div class="pane v3"><span class="tag">Conditions validées → <b>paiement déclenché</b></span><div class="art discs"><i></i><i></i><i></i><i></i></div></div>
-              <span class="bracket"></span>
+              <div class="pane"><div class="art"><svg viewBox="0 0 400 260"><rect class="fl" x="40" y="112" width="170" height="90"/><path class="ln dim" d="M62 112v90M84 112v90M106 112v90M128 112v90M150 112v90M172 112v90M194 112v90"/><circle class="lit" cx="125" cy="100" r="5"/><circle class="ping" cx="125" cy="100" r="10"/><circle class="ping" style="--d:-1.6s" cx="125" cy="100" r="10"/><text class="txt" x="40" y="232">−18 °C · GPS · PORTES OK</text><path class="ln dim" d="M210 157h80"/><path class="dash" d="M210 157h80"/><g class="slide" style="--dx:80px"><circle class="lit" cx="210" cy="157" r="6"/></g><rect class="fl" x="290" y="126" width="72" height="62"/><path class="ln hi draw" stroke-width="2.5" d="M312 158l10 10 20-24"/><text class="txt hi" x="326" y="216" text-anchor="middle">PAIEMENT</text><text class="txt" x="326" y="112" text-anchor="middle">SMART CONTRACT</text></svg></div><span class="tag">Conditions validées → <b>paiement déclenché</b></span></div>
+              <span class="mk"></span><span class="mk"></span><span class="mk"></span><span class="mk"></span>
             </div>
           </div>
         </div>
@@ -288,13 +308,13 @@
     <section class="t-cta">
       <div class="wrap">
         <div>
-          <span class="chip light rv">Parlons-en</span>
+          <span class="chip rv">Parlons-en</span>
           <h2 class="display rv" style="--d:.08s">Un projet de tokenisation ou de registre distribué ?</h2>
           <p class="rv" style="--d:.16s">Parlons de votre cas d'usage, de son cadre réglementaire et de la trajectoire de déploiement adaptée à votre institution.</p>
         </div>
         <div class="actions rv" style="--d:.2s">
-          <a href="mailto:contact@acxa.tech" class="pbtn on-dark">Nous contacter</a>
-          <a href="produits.html" class="pbtn on-dark ghost">Nos produits</a>
+          <a href="mailto:contact@acxa.tech" class="pbtn">Nous contacter</a>
+          <a href="produits.html" class="pbtn ghost">Nos produits</a>
         </div>
       </div>
     </section>
