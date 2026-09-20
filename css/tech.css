@@ -271,6 +271,36 @@ body.theme-tech {
 .art .slide { animation: slide 4.2s var(--ease) infinite; animation-delay: var(--d, 0s); }
 @keyframes slide { 0% { translate: 0 0; opacity: 0; } 15%, 80% { opacity: 1; } 100% { translate: var(--dx, 180px) 0; opacity: 0; } }
 
+/* ---------- Light sections (alternating rhythm) ---------- */
+.light {
+  --ink: #0b1a3a;
+  --ink-dim: #586683;
+  --t-line: rgba(11, 26, 58, 0.08);
+  --t-line-2: rgba(11, 26, 58, 0.16);
+  --t-line-3: rgba(11, 26, 58, 0.4);
+  background: #f5f7fc;
+  color: var(--ink);
+}
+.t-band.light { background: linear-gradient(180deg, #ffffff 0%, #f1f4fb 100%); }
+.t-band.light::after { opacity: 0.35; }
+.light .chip { background: #fff; }
+.light .tiles { background: #fff; box-shadow: 0 24px 60px rgba(11, 26, 58, 0.08); }
+.light .tile:hover { background: rgba(46, 107, 255, 0.05); }
+.light .tile .ic { color: var(--accent); }
+.light .tile .go, .light .row-text h3 small, .light .t-domains a:hover { color: var(--accent); }
+.light .row-text .facts span { background: #fff; }
+.light .row-text::after { box-shadow: 0 0 10px rgba(46, 107, 255, 0.5); }
+.light .pane-wrap {
+  --ink: #eef3fc;
+  --ink-dim: #93a5c4;
+  --t-line: rgba(147, 165, 196, 0.10);
+  --t-line-2: rgba(147, 165, 196, 0.22);
+  --t-line-3: rgba(147, 165, 196, 0.42);
+}
+.light .pane { box-shadow: 0 30px 60px rgba(11, 26, 58, 0.28); }
+.light .pane-wrap .mk { border-color: var(--accent); }
+.light + .t-section { border-top: 0; }
+
 /* ---------- CTA band ---------- */
 .t-cta { position: relative; overflow: hidden; background: linear-gradient(180deg, var(--bg-0) 0%, #0b1a3a 100%); border-top: 1px solid var(--t-line-2); }
 .t-cta::before {
