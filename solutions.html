@@ -45,27 +45,49 @@
         </div>
         <div class="hero-art rv" style="--d:.2s" aria-hidden="true">
           <svg viewBox="0 0 600 600">
-            <circle class="k-orbit" cx="300" cy="340" r="262"/>
-            <circle class="k-orbit" cx="300" cy="340" r="190" stroke-dasharray="1 10"/>
+            <circle class="k-orbit" cx="300" cy="330" r="262"/>
+            <circle class="k-orbit" cx="300" cy="330" r="190" stroke-dasharray="1 10"/>
             <g class="k-dust" style="--fd:11s"><circle cx="90" cy="150" r="2.5"/><circle cx="520" cy="120" r="2"/><circle cx="60" cy="380" r="2"/></g>
             <g class="k-dust" style="--fd:13s;--fdl:-4s"><circle cx="540" cy="330" r="2.5"/><circle cx="470" cy="70" r="1.8"/><circle cx="150" cy="70" r="2"/></g>
-            <g class="k-dust" style="--fd:9s;--fdl:-7s"><circle cx="300" cy="560" r="2"/><circle cx="560" cy="470" r="2"/><circle cx="40" cy="500" r="2.2"/></g>
-            <path class="k-edge" d="M300 90 240 240 180 390 120 540"/>
-            <path class="k-edge" d="M300 90 360 240 420 390 480 540"/>
-            <path class="k-edge" d="M180 390H420"/>
-            <path class="k-edge" d="M240 240H360" stroke-dasharray="3 6"/>
-            <path class="k-pulse" d="M120 540 180 390 240 240 300 90"/>
-            <path class="k-pulse" style="--d:-2.5s" d="M480 540 420 390 360 240 300 90"/>
-            <path class="k-pulse" style="--d:-1.2s" d="M180 390H420"/>
-            <circle class="k-node" cx="240" cy="240" r="6"/>
-            <circle class="k-node" cx="360" cy="240" r="6"/>
-            <circle class="k-node" cx="180" cy="390" r="7"/>
-            <circle class="k-node" cx="420" cy="390" r="7"/>
-            <circle class="k-node" cx="120" cy="540" r="6"/>
-            <circle class="k-node" cx="480" cy="540" r="6"/>
-            <circle class="k-ring" cx="300" cy="90" r="16"/>
-            <circle class="k-ring" style="--d:-2s" cx="300" cy="90" r="16"/>
-            <circle class="k-node hot" cx="300" cy="90" r="9"/>
+            <g class="k-dust" style="--fd:9s;--fdl:-7s"><circle cx="300" cy="590" r="2"/><circle cx="560" cy="470" r="2"/><circle cx="40" cy="500" r="2.2"/></g>
+            <!-- flux : borne → hub -->
+            <path class="k-edge" d="M172 208 C 205 250 250 288 285 312"/>
+            <path class="k-pulse" d="M172 208 C 205 250 250 288 285 312"/>
+            <!-- flux : QR → hub -->
+            <path class="k-edge" d="M433 190 C 400 235 360 278 318 312"/>
+            <path class="k-pulse" style="--d:-1.8s" d="M433 190 C 400 235 360 278 318 312"/>
+            <!-- flux : carte → hub -->
+            <path class="k-edge" d="M300 498 V 352"/>
+            <path class="k-pulse" style="--d:-3.4s" d="M300 498 V 352"/>
+            <circle class="k-node" cx="215" cy="252" r="6"/>
+            <circle class="k-node" cx="385" cy="252" r="6"/>
+            <!-- borne de commande -->
+            <rect class="k-edge" x="108" y="118" width="64" height="90" rx="8"/>
+            <rect class="k-edge" x="119" y="133" width="42" height="26" rx="4" stroke-dasharray="3 5"/>
+            <path class="k-edge" d="M130 172h20M124 182h32"/>
+            <path class="k-edge" d="M140 208v16M122 224h36"/>
+            <circle class="k-ring" cx="140" cy="168" r="15"/>
+            <circle class="k-node" cx="140" cy="168" r="9"/>
+            <!-- QR code -->
+            <rect class="k-edge" x="434" y="130" width="62" height="62" rx="8"/>
+            <path class="k-edge" d="M444 140h12v12h-12zM474 140h12v12h-12zM444 170h12v12h-12z"/>
+            <path class="k-edge" stroke-dasharray="3 5" d="M468 170h6v6h-6zM480 180h8v8h-8zM456 180h8v6h-8z"/>
+            <circle class="k-ring" style="--d:-1.4s" cx="465" cy="161" r="15"/>
+            <circle class="k-node" cx="465" cy="161" r="9"/>
+            <!-- carte bancaire -->
+            <rect class="k-edge" x="238" y="500" width="124" height="80" rx="10"/>
+            <rect class="k-edge" x="252" y="520" width="20" height="15" rx="3"/>
+            <path class="k-edge" d="M288 528h58M288 543h42M252 560h34"/>
+            <path class="k-edge" d="M352 514a24 24 0 0 1 0 52M366 506a36 36 0 0 1 0 68"/>
+            <circle class="k-node" cx="300" cy="540" r="9"/>
+            <!-- jetons -->
+            <g class="k-dust" style="--fd:12s;--fdl:-3s"><circle cx="140" cy="430" r="10" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="140" cy="430" r="3.5"/></g>
+            <g class="k-dust" style="--fd:10s;--fdl:-6s"><circle cx="480" cy="440" r="10" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="480" cy="440" r="3.5"/></g>
+            <!-- hub de règlement -->
+            <circle class="k-ring" cx="300" cy="330" r="20"/>
+            <circle class="k-ring" style="--d:-2s" cx="300" cy="330" r="20"/>
+            <circle class="k-node hot" cx="300" cy="330" r="12"/>
+            <path class="k-edge" stroke-width="2" d="M293 330l5 5.5 11-12"/>
           </svg>
         </div>
       </div>
