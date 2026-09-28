@@ -206,6 +206,15 @@ body {
 }
 .hero-cta svg { transition: transform 0.2s ease; }
 .hero-cta:hover svg { transform: translateX(3px); }
+.product-hero .hero-cta {
+  margin-top: 34px;
+  background: #fff;
+  color: var(--bg-1);
+  box-shadow: 0 10px 30px rgba(238, 243, 252, 0.16);
+}
+.product-hero .hero-cta:hover {
+  box-shadow: 0 14px 40px rgba(238, 243, 252, 0.26);
+}
 .hero-cta-ghost {
   background: transparent;
   color: #fff;
