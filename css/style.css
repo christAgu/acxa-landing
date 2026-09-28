@@ -614,6 +614,14 @@ body {
     font-weight: 400;
   }
   .a-flare { left: 46%; bottom: 12%; }
+  .hero-cta-group { gap: 10px; margin-top: 26px; }
+  .hero-cta {
+    display: inline-flex;
+    padding: 11px 18px;
+    font-size: 13.5px;
+    border-radius: 9px;
+  }
+  .hero-cta svg { width: 16px; height: 16px; }
   .hero-features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
