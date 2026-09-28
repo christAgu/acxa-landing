@@ -204,7 +204,7 @@ if (revealEls.length) {
           <div class="contact-success">
             <svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.7 2.7L16 9.5"/></svg>
             <p>Message envoyé — merci ${name} !</p>
-            <span>Notre équipe vous répondra à <b>${email}</b> très vite.</span>
+            <span>Notre équipe vous répondra très vite, <b>${name}</b>.</span>
           </div>`;
         setTimeout(close, 3500);
       } else {
