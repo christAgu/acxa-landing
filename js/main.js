@@ -123,3 +123,77 @@ if (revealEls.length) {
     revealEls.forEach((el) => revealObserver.observe(el));
   }
 }
+
+// ---------- Contact modal ----------
+(() => {
+  const links = document.querySelectorAll('a[href^="mailto:contact@acxa.io"]');
+  if (!links.length) return;
+
+  const modal = document.createElement('div');
+  modal.className = 'contact-modal';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-label', 'Formulaire de contact');
+  modal.innerHTML = `
+    <div class="contact-panel">
+      <button type="button" class="contact-close" aria-label="Fermer">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <span class="contact-chip">Contact</span>
+      <h2 class="contact-title">Écrivez-nous</h2>
+      <p class="contact-sub">Un projet, une question ? Notre équipe vous répond rapidement.</p>
+      <form id="contact-form" novalidate>
+        <div class="contact-field">
+          <label for="cf-name">Nom complet</label>
+          <input id="cf-name" name="name" type="text" placeholder="Votre nom" required>
+        </div>
+        <div class="contact-field">
+          <label for="cf-email">Adresse e-mail</label>
+          <input id="cf-email" name="email" type="email" placeholder="vous@exemple.com" required>
+        </div>
+        <div class="contact-field">
+          <label for="cf-message">Votre message</label>
+          <textarea id="cf-message" name="message" placeholder="Décrivez votre besoin…" required></textarea>
+        </div>
+        <button type="submit" class="contact-submit">
+          Envoyer le message
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+        <p class="contact-note">Ou écrivez-nous directement à <a href="mailto:contact@acxa.io">contact@acxa.io</a></p>
+      </form>
+    </div>`;
+  document.body.appendChild(modal);
+
+  const open = () => { modal.classList.add('open'); document.body.style.overflow = 'hidden'; };
+  const close = () => { modal.classList.remove('open'); document.body.style.overflow = ''; };
+
+  links.forEach((a) => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      open();
+      modal.querySelector('#cf-name').focus();
+    });
+  });
+
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  modal.querySelector('.contact-close').addEventListener('click', close);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+  modal.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = e.target;
+    const name = f.name.value.trim();
+    const email = f.email.value.trim();
+    const message = f.message.value.trim();
+    if (!name || !email || !message) {
+      [['#cf-name', name], ['#cf-email', email], ['#cf-message', message]]
+        .filter(([, v]) => !v)
+        .forEach(([sel]) => { modal.querySelector(sel).style.borderColor = '#ff5b7f'; });
+      return;
+    }
+    const subject = encodeURIComponent(`Contact site ACXA — ${name}`);
+    const body = encodeURIComponent(`Nom : ${name}\nE-mail : ${email}\n\n${message}`);
+    window.location.href = `mailto:contact@acxa.io?subject=${subject}&body=${body}`;
+    close();
+  });
+})();
