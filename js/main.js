@@ -182,7 +182,7 @@ if (revealEls.length) {
   modal.querySelector('#contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const f = e.target;
-    const name = f.name.value.trim();
+    const name = f.querySelector('#cf-name').value.trim();
     const email = f.email.value.trim();
     const message = f.message.value.trim();
     if (!name || !email || !message) {
@@ -191,9 +191,31 @@ if (revealEls.length) {
         .forEach(([sel]) => { modal.querySelector(sel).style.borderColor = '#ff5b7f'; });
       return;
     }
-    const subject = encodeURIComponent(`Contact site ACXA — ${name}`);
-    const body = encodeURIComponent(`Nom : ${name}\nE-mail : ${email}\n\n${message}`);
-    window.location.href = `mailto:contact@acxa.io?subject=${subject}&body=${body}`;
-    close();
+    const submitBtn = f.querySelector('.contact-submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi en cours…';
+    fetch('https://formspree.io/f/mnpnldyb', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    }).then((res) => {
+      if (res.ok) {
+        f.innerHTML = `
+          <div class="contact-success">
+            <svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.7 2.7L16 9.5"/></svg>
+            <p>Message envoyé — merci ${name} !</p>
+            <span>Notre équipe vous répondra à <b>${email}</b> très vite.</span>
+          </div>`;
+        setTimeout(close, 3500);
+      } else {
+        throw new Error('formspree ' + res.status);
+      }
+    }).catch(() => {
+      const subject = encodeURIComponent(`Contact site ACXA — ${name}`);
+      const body = encodeURIComponent(`Nom : ${name}\nE-mail : ${email}\n\n${message}`);
+      window.location.href = `mailto:contact@acxa.io?subject=${subject}&body=${body}`;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Envoyer le message';
+    });
   });
 })();
