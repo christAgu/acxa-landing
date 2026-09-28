@@ -208,7 +208,7 @@ body {
 .hero-cta:hover svg { transform: translateX(3px); }
 .hero-cta-ghost {
   background: transparent;
-  color: var(--accent-bright);
+  color: #fff;
   border: 1px solid rgba(91, 141, 255, 0.55);
   box-shadow: 0 0 18px rgba(91, 141, 255, 0.18), inset 0 0 14px rgba(91, 141, 255, 0.08);
 }
