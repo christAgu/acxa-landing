@@ -1,7 +1,7 @@
 (() => {
 // Smooth scrolling (webapp feel)
-if (window.Lenis) {
-  const lenis = new Lenis({ lerp: 0.1, smoothWheel: true, anchors: true });
+const lenis = window.Lenis ? new Lenis({ lerp: 0.1, smoothWheel: true, anchors: true }) : null;
+if (lenis) {
   const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); };
   requestAnimationFrame(raf);
 }
@@ -172,8 +172,8 @@ if (revealEls.length) {
     </div>`;
   document.body.appendChild(modal);
 
-  const open = () => { modal.classList.add('open'); document.body.style.overflow = 'hidden'; };
-  const close = () => { modal.classList.remove('open'); document.body.style.overflow = ''; };
+  const open = () => { modal.classList.add('open'); document.body.style.overflow = 'hidden'; if (lenis) lenis.stop(); };
+  const close = () => { modal.classList.remove('open'); document.body.style.overflow = ''; if (lenis) lenis.start(); };
 
   links.forEach((a) => {
     a.addEventListener('click', (e) => {
