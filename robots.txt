@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /mockups/
+
+Sitemap: https://acxa.io/sitemap.xml
