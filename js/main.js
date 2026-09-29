@@ -1,3 +1,4 @@
+(() => {
 // Smooth scrolling (webapp feel)
 if (window.Lenis) {
   const lenis = new Lenis({ lerp: 0.1, smoothWheel: true, anchors: true });
@@ -225,4 +226,5 @@ if (revealEls.length) {
       submitBtn.textContent = 'Envoyer le message';
     });
   });
+})();
 })();
