@@ -375,3 +375,8 @@ body.theme-tech {
 .t-cta.light { background: linear-gradient(180deg, #ffffff 0%, #f1f4fb 100%); }
 .t-cta.light::after { background: radial-gradient(closest-side, rgba(46, 107, 255, 0.16), transparent); }
 .t-cta.light .pbtn.ghost { color: var(--ink); border-color: rgba(11, 26, 58, 0.3); }
+
+
+/* dégradé d'introduction: le haut de la CTA poursuit le bleu nuit puis fond vers le blanc */
+#solutions.t-section .wrap { padding-bottom: 0; }
+.t-cta.light { background: linear-gradient(180deg, #c3d6f6 0%, #e4edfb 40%, #ffffff 85%); }
