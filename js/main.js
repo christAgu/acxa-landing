@@ -1,3 +1,10 @@
+// Smooth scrolling (webapp feel)
+if (window.Lenis) {
+  const lenis = new Lenis({ lerp: 0.1, smoothWheel: true, anchors: true });
+  const raf = (t) => { lenis.raf(t); requestAnimationFrame(raf); };
+  requestAnimationFrame(raf);
+}
+
 // Mobile nav toggle
 const toggle = document.getElementById('nav-toggle');
 const links = document.getElementById('nav-links');
