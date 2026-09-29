@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /mockups/
 
-Sitemap: https://acxa.io/sitemap.xml
+Sitemap: https://www.acxa.io/sitemap.xml
