@@ -50,6 +50,8 @@ body {
   z-index: 50;
 }
 
+.home .site-nav { padding-inline: max(clamp(20px, 5vw, 64px), calc((100% - 1240px) / 2)); }
+
 .nav-brand { display: flex; align-items: center; }
 .nav-logo { height: 34px; width: auto; display: block; }
 
