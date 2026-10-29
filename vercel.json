@@ -1,6 +1,5 @@
 {
   "redirects": [
-    { "source": "/produits.html", "destination": "/", "permanent": false },
     { "source": "/technologies.html", "destination": "/", "permanent": false }
   ]
 }
