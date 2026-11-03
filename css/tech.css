@@ -376,3 +376,6 @@ body.theme-tech {
   .pane .tag { font-size: 11px; }
 }
 
+
+.row p a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.row p a:hover { text-decoration: underline; text-underline-offset: 3px; }
