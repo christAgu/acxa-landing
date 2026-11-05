@@ -1,5 +1,14 @@
 {
   "redirects": [
-    { "source": "/technologies.html", "destination": "/", "permanent": false }
+    {
+      "source": "/technologies.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/digital-banking.html",
+      "destination": "/",
+      "permanent": false
+    }
   ]
 }
